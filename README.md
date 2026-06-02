@@ -1,14 +1,14 @@
-# 💻 IT Asset Monitoring & Data Pipeline System
+#  IT Asset Monitoring & Data Pipeline System
 
 A professional web-based IT Asset Monitoring and Data Pipeline Management System developed using Flask, Python, SQLite, and Pandas.
 
 The application helps organizations efficiently manage IT assets, track employee allocations, monitor activity logs, and generate CSV-based reports through a centralized dashboard.
 
-Live Demo
+Live Demo:
 
-https://it-asset-pipeline-system-4vvr.onrender.com/
+https://it-asset-data-pipeline-system.onrender.com/
 
-# 🚀 Key Features
+#  Key Features
 
 - Secure User Authentication
 - IT Asset Management
@@ -21,7 +21,7 @@ https://it-asset-pipeline-system-4vvr.onrender.com/
 
 ---
 
-# 🛠️ Technology Stack
+#  Technology Stack
 
 | Category | Technologies |
 |---|---|
@@ -33,7 +33,7 @@ https://it-asset-pipeline-system-4vvr.onrender.com/
 
 ---
 
-# 📂 Project Structure
+#  Project Structure
 
 ```text
 IT-Asset-Monitoring-System/
@@ -54,7 +54,7 @@ IT-Asset-Monitoring-System/
 
 ---
 
-# ⚙️ Installation and Setup
+#  Installation and Setup
 
 ## 1. Clone the Repository
 
@@ -106,7 +106,7 @@ python app.py
 
 ---
 
-# 🌐 Application URL
+#  Application URL
 
 ```text
 http://127.0.0.1:5000
@@ -114,33 +114,33 @@ http://127.0.0.1:5000
 
 ---
 
-# 📸 Application Screenshots
+#  Application Screenshots
 
-## 🔐 Login Page
+##  Login Page
 
 ![Login Page](screenshots/login_page.png)
 
 ---
 
-## 📝 Register Page
+##  Register Page
 
 ![Register Page](screenshots/register_page.png)
 
 ---
 
-## 📦 Asset Management Table
+##  Asset Management Table
 
 ![Asset Management](screenshots/asset_management_table.png)
 
 ---
 
-## 📊 Asset Record Table
+##  Asset Record Table
 
 ![Asset Record](screenshots/asset_record_table.png)
 
 ---
 
-# 🔒 Core Modules
+#  Core Modules
 
 ## Asset Management
 - Add and manage IT assets
@@ -164,7 +164,7 @@ http://127.0.0.1:5000
 
 ---
 
-# 📈 Future Improvements
+#  Future Improvements
 
 - Email Notifications
 - Advanced Filtering and Search
@@ -176,26 +176,26 @@ http://127.0.0.1:5000
 
 ---
 
-# 🤝 Contribution
+#  Contribution
 
 Contributions are welcome.  
 Feel free to fork the repository and submit pull requests for improvements.
 
 ---
 
-# 📄 License
+#  License
 
 This project is licensed under the MIT License.
 
 ---
 
-# 👨‍💻 Author
+#  Author
 
-**Akram Hussain**  
+**Akram Hussain** & **Hussain bee**
 Python Developer | Flask Developer | Data Pipeline Enthusiast
 
 ---
 
-# ⭐ Acknowledgement
+#  Acknowledgement
 
-If you found this project useful, consider giving it a ⭐ on GitHub.
+If you found this project useful, consider giving it a * on GitHub.
