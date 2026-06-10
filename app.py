@@ -38,7 +38,12 @@ app = Flask(__name__)
 
 app.config['SECRET_KEY'] = 'secretkey'
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///assets.db'
+import os
+
+app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv(
+    "DATABASE_URL",
+    "sqlite:///assets.db"
+)
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
