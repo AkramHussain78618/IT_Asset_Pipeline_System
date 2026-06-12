@@ -10,6 +10,8 @@ from flask import (
 
 from flask_sqlalchemy import SQLAlchemy
 
+from sqlalchemy import func
+
 from flask_login import (
     LoginManager,
     UserMixin,
@@ -277,10 +279,13 @@ def dashboard():
 
     if search:
 
-        assets = Asset.query.filter(
-            Asset.user_id == current_user.id,
-            Asset.employee.contains(search)
-        ).all()
+    assets = Asset.query.filter(
+        Asset.user_id == current_user.id,
+        (
+    func.lower(Asset.employee).contains(search.lower()) 
+    func.lower(Asset.asset_name).contains(search.lower()) 
+    func.lower(Asset.asset_type).contains(search.lower())
+    ).all()
 
     else:
 
