@@ -279,13 +279,16 @@ def dashboard():
 
     if search:
 
-    assets = Asset.query.filter(
-        Asset.user_id == current_user.id,
-        (
-    func.lower(Asset.employee).contains(search.lower()) 
-    func.lower(Asset.asset_name).contains(search.lower()) 
-    func.lower(Asset.asset_type).contains(search.lower())
-    ).all()
+        assets = Asset.query.filter(
+            Asset.user_id == current_user.id,
+            (
+                func.lower(Asset.employee).contains(search.lower()) |
+                func.lower(Asset.asset_name).contains(search.lower()) |
+                func.lower(Asset.asset_type).contains(search.lower())
+            )
+        ).order_by(
+            Asset.created_at.desc()
+        ).all()
 
     else:
 
