@@ -10,6 +10,8 @@ from flask import (
 
 from flask_sqlalchemy import SQLAlchemy
 
+from io import BytesIO
+
 from sqlalchemy import func
 
 from flask_login import (
@@ -469,21 +471,45 @@ def delete_asset(id):
 @app.route('/export')
 @login_required
 def export_assets():
-    assets = Asset.query.filter_by(user_id=current_user.id).all()
+
+    assets = Asset.query.filter_by(
+        user_id=current_user.id
+    ).all()
+
     data = []
+
     for a in assets:
         data.append({
             "Asset Name": a.asset_name,
             "Asset Type": a.asset_type,
             "Employee": a.employee,
+            "Assigned Date": a.assigned_date.strftime("%Y-%m-%d"),
             "Status": a.status,
             "Reason": a.reason
         })
 
     df = pd.DataFrame(data)
-    path = "asset_export.csv"
-    df.to_csv(path, index=False)
-    return send_file(path, as_attachment=True)
+
+    output = BytesIO()
+
+    with pd.ExcelWriter(
+        output,
+        engine="openpyxl"
+    ) as writer:
+        df.to_excel(
+            writer,
+            index=False,
+            sheet_name="Assets"
+        )
+
+    output.seek(0)
+
+    return send_file(
+        output,
+        download_name="asset_report.xlsx",
+        as_attachment=True,
+        mimetype="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    )
 
 # ================= IMPORT CSV =================
 
