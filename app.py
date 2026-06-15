@@ -50,6 +50,10 @@ if database_url and database_url.startswith("postgres://"):
         "postgresql://",
         1
     )
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
 
 database_url = os.getenv("DATABASE_URL")
 
@@ -59,7 +63,7 @@ app.config["SQLALCHEMY_DATABASE_URI"] = (
 
 print("DATABASE_URL =", database_url)
 print("ACTIVE DB =", app.config["SQLALCHEMY_DATABASE_URI"])
-
+print(app.config["SQLALCHEMY_DATABASE_URI"])
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
