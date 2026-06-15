@@ -23,10 +23,7 @@ from flask_login import (
     current_user
 )
 
-from werkzeug.security import (
-    generate_password_hash,
-    check_password_hash
-)
+from werkzeug.security import generate_password_hash, check_password_hash
 
 from datetime import datetime
 
@@ -54,10 +51,14 @@ if database_url and database_url.startswith("postgres://"):
         1
     )
 
+database_url = os.getenv("DATABASE_URL")
+
 app.config["SQLALCHEMY_DATABASE_URI"] = (
     database_url or "sqlite:///assets.db"
 )
-    
+
+print("DATABASE_URL =", database_url)
+print("ACTIVE DB =", app.config["SQLALCHEMY_DATABASE_URI"])
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
