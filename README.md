@@ -189,12 +189,11 @@ This project is licensed under the MIT License.
 
 ---
 
-#  Author
+### Hussain bee & Akram Hussain
 
-**Akram Hussain** & **Hussain bee**
-Python Developer | Flask Developer | Data Pipeline Enthusiast
+Aspiring Software Developer passionate about
 
----
+Python Development | Web Technologies | AI Development | Artificial Intelligence
 
 #  Acknowledgement
 
