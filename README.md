@@ -189,6 +189,9 @@ This project is licensed under the MIT License.
 
 ---
 
+
+## Author
+
 ### Hussain bee & Akram Hussain
 
 Aspiring Software Developer passionate about
