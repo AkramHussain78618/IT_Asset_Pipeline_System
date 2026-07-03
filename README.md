@@ -192,11 +192,11 @@ This project is licensed under the MIT License.
 
 ## Author
 
-### Hussain bee & Akram Hussain
+Hussain Bee & Akram Hussain
 
-Aspiring Software Developer passionate about
+Aspiring Software Developers | Python Enthusiasts | Data Analytics & AI Learners
 
-Python Development | Web Technologies | AI Development | Artificial Intelligence
+Passionate about Software Development, Data Analytics, Artificial Intelligence, Web Technologies, Automation, and Problem Solving. Dedicated to continuous learning and building innovative, scalable, and impactful solutions that deliver exceptional user experiences.
 
 #  Acknowledgement
 
